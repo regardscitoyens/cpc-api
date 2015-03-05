@@ -1,5 +1,7 @@
 # CPC-API
-A python api for http://nosdeputes.fr and http://nossenateurs.fr. Project wiki is here http://cpc.regardscitoyens.org/trac/wiki.
+A python api for http://nosdeputes.fr and http://nossenateurs.fr.
+
+Project wiki is here http://cpc.regardscitoyens.org/trac/wiki.
 
 [![Build Status](https://travis-ci.org/fmassot/cpc-api.svg)](https://travis-ci.org/fmassot/cpc-api)
 
@@ -19,7 +21,9 @@ all_info = api.parlementaire(cope['slug'])
 ```
 
  * Sénateurs, legislature 2007-2012
- ```python
+
+```python
+from cpc_api import CPCApi
 # do the same with senateurs
 api = CPCApi(ptype='senateur')
 print 'or with legislature 2007-2012'

@@ -26,7 +26,9 @@ all_info = api.parlementaire(cope['slug'])
 from cpc_api import CPCApi
 # do the same with senateurs
 api = CPCApi(ptype='senateur')
-print 'or with legislature 2007-2012'
+larcher = api.search_parlementaires('larcher')[0][0]
+# 'or with legislature 2007-2012'
 api = CPCApi(ptype='senateur', legislature='2007-2012')
+morano = api.search_parlementaires('morano')[0][0]
 # ...
 ```

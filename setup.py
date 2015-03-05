@@ -15,7 +15,7 @@ with open(path.join(here, 'README.md')) as readme:
     LONG_DESC = readme.read().decode('utf-8')
 
 setup(
-    name='anpy',
+    name='cpc_api',
     version=__version__,
 
     description='Python api for nosdeputes.fr and nossenatures.fr',

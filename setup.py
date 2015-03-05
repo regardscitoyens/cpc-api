@@ -7,7 +7,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 __version__ = None
-with open(path.join(here, 'anpy', '__version.py')) as __version:
+with open(path.join(here, 'cpc_api', '__version.py')) as __version:
     exec(__version.read())
 assert __version__ is not None
 
@@ -39,6 +39,4 @@ setup(
     packages=['cpc_api'],
 
     install_requires=['requests', 'fuzzywuzzy'],
-
-    scripts=['bin/anpy-cli.py'],
 )

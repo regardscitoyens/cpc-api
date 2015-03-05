@@ -55,8 +55,10 @@ class CPCApi(object):
         return requests.get(url)
 
     def search(self, q, page=1):
-        url = '%s/recherche/%s?page=%s&format=%s' % (self.base_url, q, page, self.format)
-        return requests.get(url).json()
+        # XXX : the response with json format is not a valid json :'(
+        # Temporary return csv raw data
+        url = '%s/recherche/%s?page=%s&format=%s' % (self.base_url, q, page, 'csv')
+        return requests.get(url).content
 
     @memoize
     def parlementaires(self, active=None):

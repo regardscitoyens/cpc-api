@@ -1,7 +1,11 @@
+|Downloads| |Build Status| |Latest Version| |Supported Python versions|
+
 # CPC-API
-A python api for http://nosdeputes.fr and http://nossenateurs.fr.
+A python api for http://nosdeputes.fr and http://nossenateurs.fr
 
 Project wiki is here http://cpc.regardscitoyens.org/trac/wiki.
+
+CPC is for *Controle Parlementaire Citoyens*.
 
 [![Build Status](https://travis-ci.org/fmassot/cpc-api.svg)](https://travis-ci.org/fmassot/cpc-api)
 

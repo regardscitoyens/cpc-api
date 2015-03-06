@@ -54,7 +54,7 @@ class CPCApi(object):
         return requests.get(self.picture_url(slug_name, pixels=pixels))
 
     def picture_url(self, slug_name, pixels='60'):
-        return '%s/%s/%s' % (self.base_url, slug_name, pixels)
+        return '%s/%s/photo/%s/%s' % (self.base_url, self.ptype, slug_name, pixels)
 
     def search(self, q, page=1):
         # XXX : the response with json format is not a valid json :'(

@@ -18,7 +18,7 @@ setup(
     name='cpc_api',
     version=__version__,
 
-    description='Python api for nosdeputes.fr and nossenatures.fr',
+    description='Python api for nosdeputes.fr and nossenateurs.fr',
     long_description=LONG_DESC,
     license="MIT",
 

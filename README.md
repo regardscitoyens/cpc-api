@@ -31,7 +31,7 @@ from cpc_api import CPCApi
 api = CPCApi(ptype='senateur')
 larcher = api.search_parlementaires('larcher')[0][0]
 # 'or with legislature 2007-2012'
-api = CPCApi(ptype='senateur', legislature='2007-2012')
+api = CPCApi(ptype='depute', legislature='2007-2012')
 morano = api.search_parlementaires('morano')[0][0]
 # ...
 ```

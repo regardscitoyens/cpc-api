@@ -23,7 +23,7 @@ cope = api.search_parlementaires('Cope')[0][0]
 all_info = api.parlementaire(cope['slug'])
 ```
 
- * Sénateurs, legislature 2007-2012
+ * Sénateurs & députés legislature 2007-2012...
 
 ```python
 from cpc_api import CPCApi

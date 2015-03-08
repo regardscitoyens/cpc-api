@@ -26,6 +26,8 @@ setup(
     author='François Massot',
     author_email='francois.massot@gmail.com',
 
+    include_package_data=True,
+
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',

@@ -22,9 +22,9 @@ setup(
     long_description=LONG_DESC,
     license="MIT",
 
-    url='https://github.com/fmassot/cpc-api',
-    author='François Massot',
-    author_email='francois.massot@gmail.com',
+    url='https://github.com/regardscitoyens/cpc-api',
+    author='Regards Citoyens',
+    author_email='contact@regardscitoyens.org',
 
     include_package_data=True,
 

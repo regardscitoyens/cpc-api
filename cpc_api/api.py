@@ -2,7 +2,11 @@
 
 from operator import itemgetter
 import requests
-from fuzzywuzzy.process import extractBests
+import warnings
+
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore", category=UserWarning)
+    from fuzzywuzzy.process import extractBests
 
 
 __all__ = ['CPCApi']

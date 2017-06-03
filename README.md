@@ -5,8 +5,7 @@ A python api for http://nosdeputes.fr and http://nossenateurs.fr
 
 CPC is for *Controle Parlementaire Citoyens*.
 
-Project wiki is here : http://cpc.regardscitoyens.org/trac/wiki.
-
+See full API documentation here: https://github.com/regardscitoyens/nosdeputes.fr/blob/master/doc/opendata.md
 
 ## Examples
 

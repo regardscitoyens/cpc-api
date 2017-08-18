@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/fmassot/cpc-api.svg)](https://travis-ci.org/fmassot/cpc-api)
+[![Build Status](https://travis-ci.org/regardscitoyens/cpc-api.svg)](https://travis-ci.org/regardscitoyens/cpc-api)
 
 # CPC-API
 A python api for http://nosdeputes.fr and http://nossenateurs.fr

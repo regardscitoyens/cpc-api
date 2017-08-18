@@ -13,8 +13,8 @@ See full API documentation here: https://github.com/regardscitoyens/nosdeputes.f
  
 ```python
 from cpc_api import CPCApi
-api = CPCApi()
-# synthese of last 12 month
+api = CPCApi(legislature='2012-2017')
+# synthese of legislature
 synthese = api.synthese()
 # search for a depute
 cope = api.search_parlementaires('Cope')[0][0]

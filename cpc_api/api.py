@@ -33,8 +33,8 @@ class CPCApi(object):
         """
 
         assert(ptype in ['depute', 'senateur'])
-        assert(legislature in ['2007-2012', None])
-
+        assert(legislature in ['2007-2012', '2012-2017', None])
+        self.legislature = legislature
         self.ptype = ptype
         self.ptype_plural = ptype + 's'
         self.base_url = 'https://%s.nos%s.fr' % (legislature or 'www', self.ptype_plural)
@@ -43,8 +43,12 @@ class CPCApi(object):
         """
         month format: YYYYMM
         """
+        if month is None and self.legislature == '2012-2017':
+            raise AssertionError('Global Synthesis on legislature does not work, see https://github.com/regardscitoyens/nosdeputes.fr/issues/69')
+
         if month is None:
             month = 'data'
+
         url = '%s/synthese/%s/%s' % (self.base_url, month, self.format)
 
         data = requests.get(url).json()
@@ -77,4 +81,4 @@ class CPCApi(object):
         return [depute[self.ptype] for depute in data[self.ptype_plural]]
 
     def search_parlementaires(self, q, field='nom', limit=5):
-        return extractBests(q, self.parlementaires(), processor=itemgetter(field), limit=limit)
+        return extractBests(q, self.parlementaires(), processor=lambda x: x[field] if type(x) == dict else x, limit=limit)

@@ -37,7 +37,7 @@ class CPCApi(object):
 
         self.ptype = ptype
         self.ptype_plural = ptype + 's'
-        self.base_url = 'http://%s.nos%s.fr' % (legislature or 'www', self.ptype_plural)
+        self.base_url = 'https://%s.nos%s.fr' % (legislature or 'www', self.ptype_plural)
 
     def synthese(self, month=None):
         """

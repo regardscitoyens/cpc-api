@@ -12,8 +12,15 @@ with open(path.join(here, 'cpc_api', '__version.py')) as __version:
 assert __version__ is not None
 
 with open(path.join(here, 'README.md')) as readme:
-    LONG_DESC = readme.read().decode('utf-8')
-
+    LONG_DESC = readme.read()
+    # are we using Python2 ? If yes, then decode.
+    # If not, it raises AttributeError, that we should ignore
+    try:  
+        LONG_DESC = LONG_DESC.decode('utf-8')
+    except AttributeError:
+        # nothing to do here :
+        # we are running Python3, the LONG_DESC str is already perfect
+        pass
 setup(
     name='cpc_api',
     version=__version__,
